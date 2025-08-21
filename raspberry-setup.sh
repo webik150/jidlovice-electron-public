@@ -34,7 +34,7 @@ EOF
 
 # Add to labwc autostart
 mkdir -p "$(dirname "$LABWC_AUTOSTART")"
-grep -qxF "$APP_DIR/$APP_NAME" "$LABWC_AUTOSTART" 2>/dev/null || echo "sleep 10; $APP_DIR/$APP_NAME &" >> "$LABWC_AUTOSTART"
+grep -qxF "$APP_DIR/$APP_NAME" "$LABWC_AUTOSTART" 2>/dev/null || echo "sleep 10; sudo $APP_DIR/$APP_NAME &" >> "$LABWC_AUTOSTART"
 chmod +x "$LABWC_AUTOSTART"
 
 # Setup logrotate
